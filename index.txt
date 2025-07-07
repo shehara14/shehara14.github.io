@@ -1,0 +1,51 @@
+vCard - Personal Portfolio
+
+# sidebar
+
+alt = Shehara Manathunga
+Shehara manathunga
+Undergraduate Student
+
+Show Contacts
+
+Email
+shehara314@gmail.com
+
+Phone
++94 766137335
+
+Birthday
+March 14, 2002
+
+Location
+New Kandy Rd, Malabe, Sri Lanka
+
+# navbar
+
+About
+Resume
+Portfolio
+Blog
+Contact
+
+# about
+
+About me
+
+ I am a third-year undergraduate at the Sri Lanka Institute of Information Technology (SLIIT), pursuing a BSc (Hons) in Information Technology with a strong interest in UI/UX Design, Web Design, and Quality Assurance. My academic journey has equipped me with a solid foundation in front-end development, user-centered design principles, and modern testing practices.
+
+Through various university projects, I have gained hands-on experience in designing user-friendly interfaces, developing responsive web applications, and conducting both manual and automated testing. I'm passionate about creating smooth, accessible digital experiences and continuously improving through real-world exposure. I am now seeking opportunities to apply my skills, contribute to innovative solutions, and grow professionally in the tech industry.
+
+
+
+# contact
+
+Contact
+
+Contact Form
+
+Full name
+Email address
+Your Message
+
+Send Message
