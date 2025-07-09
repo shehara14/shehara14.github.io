@@ -1,44 +1,53 @@
-# vCard - Personal portfolio
+# Shehara's Portfolio - Personal Portfolio Website
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+![GitHub repo size](https://img.shields.io/github/repo-size/SheharaGit/shehara-portfolio)
+![GitHub stars](https://img.shields.io/github/stars/SheharaGit/shehara-portfolio?style=social)
+![GitHub forks](https://img.shields.io/github/forks/SheharaGit/shehara-portfolio?style=social)
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+Shehara's Portfolio is a fully responsive personal portfolio website, optimized for all screen sizes. Built using **HTML, CSS, and JavaScript**, it showcases my skills, projects, and contact information in a modern and professional layout.
 
-## Demo
+---
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+## 🔗 Live Demo
 
-## Prerequisites
+**Visit the live website:** [shehara.github.io/shehara-portfolio](https://shehara.github.io/shehara-portfolio)
 
-Before you begin, ensure you have met the following requirements:
+![Desktop Demo](./website-demo-image/desktop.png "Desktop View")
+![Mobile Demo](./website-demo-image/mobile.png "Mobile View")
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+---
 
-## Installing vCard
+## 📌 Features
 
-To install **vCard**, follow these steps:
+- Fully responsive design for mobile, tablet, and desktop
+- Clean and modern user interface
+- Sections: About Me, Skills, Projects, Education, Certifications, Contact
+- Smooth scrolling and interactive elements
 
-Linux and macOS:
+---
 
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- FontAwesome (icons)
+- Google Fonts
+
+---
+
+## 📂 Prerequisites
+
+Before installing, make sure you have:
+
+- [Git](https://git-scm.com/downloads) installed
+
+---
+
+## ⚙️ Installation
+
+To install and run this project locally:
+
+### Linux & macOS:
 ```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-## Contact
-
-If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
-
-## License
-
-MIT
+sudo git clone https://github.com/SheharaGit/shehara-portfolio.git
