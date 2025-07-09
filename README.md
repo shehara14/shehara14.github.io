@@ -1,44 +1,49 @@
-# vCard - Personal portfolio
+# Shehara's Portfolio - Personal Portfolio Website
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+![GitHub repo size](https://img.shields.io/github/repo-size/shehara14/shehara14.github.io)
+![GitHub stars](https://img.shields.io/github/stars/shehara14/shehara14.github.io?style=social)
+![GitHub forks](https://img.shields.io/github/forks/shehara14/shehara14.github.io?style=social)
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+**Shehara's Portfolio** is a fully responsive personal portfolio website, built using **HTML, CSS, and JavaScript**. It showcases my skills, projects, and contact information in a clean and professional layout.
 
-## Demo
+---
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+## 🔗 Live Demo
 
-## Prerequisites
+👉 [Click here to view the live site](https://shehara14.github.io/)
 
-Before you begin, ensure you have met the following requirements:
+---
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+## 📌 Features
 
-## Installing vCard
+- Responsive design for all devices
+- Smooth user experience
+- Clean and modern interface
+- Sections: About Me, Skills, Projects, Certifications, Contact
 
-To install **vCard**, follow these steps:
+---
 
-Linux and macOS:
+## 🛠️ Technologies Used
+
+- HTML5  
+- CSS3  
+- JavaScript  
+- FontAwesome  
+- Google Fonts  
+
+---
+
+## 📂 Prerequisites
+
+Before cloning or modifying this project, make sure you have:
+
+- [Git](https://git-scm.com/downloads) installed
+
+---
+
+## ⚙️ Installation
+
+To clone this repository and run it locally:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-## Contact
-
-If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
-
-## License
-
-MIT
+git clone https://github.com/shehara14/shehara14.github.io.git
