@@ -1,44 +1,41 @@
 # Shehara's Portfolio - Personal Portfolio Website
 
-![GitHub repo size](https://img.shields.io/github/repo-size/SheharaGit/shehara-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/SheharaGit/shehara-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/SheharaGit/shehara-portfolio?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/shehara14/shehara14.github.io)
+![GitHub stars](https://img.shields.io/github/stars/shehara14/shehara14.github.io?style=social)
+![GitHub forks](https://img.shields.io/github/forks/shehara14/shehara14.github.io?style=social)
 
-Shehara's Portfolio is a fully responsive personal portfolio website, optimized for all screen sizes. Built using **HTML, CSS, and JavaScript**, it showcases my skills, projects, and contact information in a modern and professional layout.
+**Shehara's Portfolio** is a fully responsive personal portfolio website, built using **HTML, CSS, and JavaScript**. It showcases my skills, projects, and contact information in a clean and professional layout.
 
 ---
 
 ## 🔗 Live Demo
 
-**Visit the live website:** [shehara.github.io/shehara-portfolio](https://shehara.github.io/shehara-portfolio)
-
-![Desktop Demo](./website-demo-image/desktop.png "Desktop View")
-![Mobile Demo](./website-demo-image/mobile.png "Mobile View")
+👉 [Click here to view the live site](https://shehara14.github.io/)
 
 ---
 
 ## 📌 Features
 
-- Fully responsive design for mobile, tablet, and desktop
-- Clean and modern user interface
-- Sections: About Me, Skills, Projects, Education, Certifications, Contact
-- Smooth scrolling and interactive elements
+- Responsive design for all devices
+- Smooth user experience
+- Clean and modern interface
+- Sections: About Me, Skills, Projects, Certifications, Contact
 
 ---
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
-- FontAwesome (icons)
-- Google Fonts
+- HTML5  
+- CSS3  
+- JavaScript  
+- FontAwesome  
+- Google Fonts  
 
 ---
 
 ## 📂 Prerequisites
 
-Before installing, make sure you have:
+Before cloning or modifying this project, make sure you have:
 
 - [Git](https://git-scm.com/downloads) installed
 
@@ -46,8 +43,7 @@ Before installing, make sure you have:
 
 ## ⚙️ Installation
 
-To install and run this project locally:
+To clone this repository and run it locally:
 
-### Linux & macOS:
 ```bash
-sudo git clone https://github.com/SheharaGit/shehara-portfolio.git
+git clone https://github.com/shehara14/shehara14.github.io.git
