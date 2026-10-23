@@ -332,6 +332,7 @@ a { color: inherit; text-decoration: none; }
 .career-panel[hidden] { display: none !important; }
 .career-panel.is-active { opacity: 1; transform: translateY(0); }
 .career-entry { display: grid; align-items: start; gap: clamp(1.6rem, 4vw, 3.5rem); }
+.career-details-toggle { display: none; }
 .experience-entry { grid-template-columns: minmax(170px, .42fr) minmax(0, 1fr); }
 .education-entry { grid-template-columns: minmax(0, 1fr) minmax(170px, .42fr); }
 .career-date { display: flex; flex-direction: column; gap: .2rem; padding-top: .1rem; color: var(--white); font-family: var(--font-display); font-size: clamp(1.25rem, 2.5vw, 1.8rem); font-weight: 700; letter-spacing: -.05em; line-height: 1.15; }
@@ -474,7 +475,7 @@ a { color: inherit; text-decoration: none; }
   }
   .hero-copy { margin-top: 0; }
   .hero-copy--left { grid-column: 1; grid-row: 1; }
-  .hero-copy--right { grid-column: 1 / -1; grid-row: 2; width: min(100%, 17rem); justify-self: end; align-self: start; margin-top: .35rem; text-align: right; }
+  .hero-copy--right { position: absolute; right: var(--hero-edge-inset); bottom: 4.55rem; width: 17rem; max-width: calc(100vw - (var(--hero-edge-inset) * 2)); margin: 0; text-align: right; }
   .eyebrow { font-size: .82rem; }
   .hero-copy--left h1 { font-size: clamp(1.35rem, 5vw, 1.8rem); }
   .hero-meta { max-width: 190px; font-size: .6rem; }
@@ -571,6 +572,13 @@ a { color: inherit; text-decoration: none; }
   .career-content h3 { font-size: clamp(.95rem, 4vw, 1.15rem); }
   .career-organization { font-size: .84rem; }
   .career-content ul { gap: .38rem; font-size: .82rem; line-height: 1.5; }
+  .career-details-toggle { display: inline-flex; align-items: center; gap: .3rem; margin: .15rem 0 .6rem; padding: .35rem .65rem; border: 1px solid rgba(85, 184, 255, .25); border-radius: 999px; background: rgba(14, 37, 66, .5); color: #9bd6ff; font: 600 .7rem var(--font-body); cursor: pointer; }
+  .career-details-toggle:hover, .career-details-toggle:focus-visible { border-color: rgba(85, 184, 255, .56); background: rgba(20, 62, 105, .68); }
+  .career-details-toggle:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 3px; }
+  .career-details-toggle i { font-size: 1rem; transition: transform .2s ease; }
+  .career-entry.is-expanded .career-details-toggle i { transform: rotate(180deg); }
+  .career-entry.is-collapsed .career-content ul { display: none; }
+  .career-entry.is-expanded .career-content ul { display: grid; }
 }
 @media (max-width: 380px) {
   .career-section { --career-inset: 1rem; }

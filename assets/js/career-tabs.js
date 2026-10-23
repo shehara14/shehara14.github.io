@@ -47,4 +47,43 @@
       activateTab(tabs[nextIndex], true);
     });
   });
+
+  const experienceEntries = [...document.querySelectorAll(".experience-entry")];
+  const mobileExperience = window.matchMedia("(max-width: 620px)");
+
+  function setupMobileExperience() {
+    experienceEntries.forEach((entry) => {
+      const content = entry.querySelector(".career-content");
+      let toggle = content?.querySelector(".career-details-toggle");
+
+      if (!toggle && content) {
+        toggle = document.createElement("button");
+        toggle.className = "career-details-toggle";
+        toggle.type = "button";
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.innerHTML = `<span>Read more</span><i class="ri-arrow-down-s-line" aria-hidden="true"></i>`;
+        content.insertBefore(toggle, content.querySelector("ul"));
+
+        toggle.addEventListener("click", () => {
+          const expanded = entry.classList.toggle("is-expanded");
+          entry.classList.toggle("is-collapsed", !expanded);
+          toggle.setAttribute("aria-expanded", String(expanded));
+          toggle.querySelector("span").textContent = expanded ? "Show less" : "Read more";
+        });
+      }
+
+      if (mobileExperience.matches) {
+        if (!entry.classList.contains("is-expanded")) entry.classList.add("is-collapsed");
+      } else {
+        entry.classList.remove("is-collapsed", "is-expanded");
+        if (toggle) {
+          toggle.setAttribute("aria-expanded", "true");
+          toggle.querySelector("span").textContent = "Show less";
+        }
+      }
+    });
+  }
+
+  setupMobileExperience();
+  mobileExperience.addEventListener("change", setupMobileExperience);
 })();
