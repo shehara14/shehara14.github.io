@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#030207" />
+    <meta name="description" content="Contact M.A.A. Shehara Manathunga about project management, software QA, and digital product collaboration." />
+    <link rel="icon" type="image/png" sizes="any" href="assets/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Contact | M.A.A. Shehara Manathunga</title>
+  </head>
+  <body>
+    <div class="tech-background" aria-hidden="true">
+      <i class="ri-code-s-slash-line"></i><i class="ri-database-2-line"></i><i class="ri-terminal-box-line"></i>
+      <i class="ri-cloud-line"></i><i class="ri-cpu-line"></i><i class="ri-git-branch-line"></i>
+      <i class="ri-shield-keyhole-line"></i><i class="ri-server-line"></i><i class="ri-smartphone-line"></i>
+      <i class="ri-wifi-line"></i><i class="ri-braces-line"></i><i class="ri-bug-line"></i>
+      <i class="ri-javascript-line"></i><i class="ri-html5-line"></i><i class="ri-css3-line"></i><i class="ri-reactjs-line"></i>
+    </div>
+    <header class="site-header">
+      <a class="brand" href="index.html#home" aria-label="Shehara home"><span class="brand-avatar"><img class="brand-icon" src="assets/img/favicon.png" alt="" /></span> <span>Shehara</span></a>
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="about.html"><span class="desktop-nav-label">About Us</span><span class="mobile-nav-label">About</span></a>
+        <a href="projects.html">Projects</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-layout">
+          <div class="contact-form-panel">
+            <span class="contact-accent-rule" aria-hidden="true"></span>
+            <h2 id="contact-title">Send Me a Message</h2>
+            <p class="contact-intro">Send me a message and I'll get back to you as soon as possible.</p>
+            <form class="contact-form" id="contact-form" data-endpoint="https://formsubmit.co/ajax/shehara314@gmail.com">
+              <label class="contact-field">
+                <span class="sr-only">Name</span>
+                <i class="ri-user-line" aria-hidden="true"></i>
+                <input type="text" name="name" placeholder="Name *" autocomplete="name" required />
+              </label>
+              <label class="contact-field">
+                <span class="sr-only">Email</span>
+                <i class="ri-mail-line" aria-hidden="true"></i>
+                <input type="email" name="email" placeholder="Email *" autocomplete="email" required />
+              </label>
+              <label class="contact-field contact-message-field">
+                <span class="sr-only">Message</span>
+                <i class="ri-chat-2-line" aria-hidden="true"></i>
+                <textarea name="message" placeholder="Message *" rows="4" required></textarea>
+              </label>
+              <div class="contact-form-footer">
+                <button class="contact-submit" type="submit"><i class="ri-send-plane-fill" aria-hidden="true"></i> Send Message</button>
+                <p class="contact-form-note" id="contact-form-note" role="status" aria-live="polite" hidden></p>
+              </div>
+            </form>
+          </div>
+
+          <aside class="contact-details" aria-label="Contact information">
+            <article class="contact-detail-card">
+              <span class="contact-detail-icon"><i class="ri-map-pin-2-line" aria-hidden="true"></i></span>
+              <div><h2>Location</h2><p>Piliyandala, Sri Lanka</p></div>
+            </article>
+            <article class="contact-detail-card">
+              <span class="contact-detail-icon"><i class="ri-phone-line" aria-hidden="true"></i></span>
+              <div><h2>Phone</h2><p><a href="tel:+94766137335">+94 76 613 7335</a></p></div>
+            </article>
+            <article class="contact-detail-card">
+              <span class="contact-detail-icon"><i class="ri-mail-line" aria-hidden="true"></i></span>
+              <div><h2>Email</h2><p><a href="mailto:shehara314@gmail.com">shehara314@gmail.com</a></p></div>
+            </article>
+            <nav class="contact-social-links" aria-label="Social media profiles">
+              <a href="https://www.linkedin.com/in/shehara-manathunga" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="ri-linkedin-fill" aria-hidden="true"></i></a>
+              <a href="https://github.com/shehara14" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="ri-github-fill" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/share/1LfrwFHoX1/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/shehara.0_?mdxt=MTk1emxoaDRtNXAydQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="ri-instagram-line" aria-hidden="true"></i></a>
+            </nav>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <script src="assets/js/contact-form.js" defer></script>
+    <script src="assets/js/motion.js" defer></script>
+  </body>
+</html>
