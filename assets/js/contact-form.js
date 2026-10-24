@@ -6,6 +6,14 @@
   function hideStatus() {
     status.hidden = true;
     status.textContent = "";
+    status.classList.remove("is-success", "is-error");
+  }
+
+  function showStatus(message, type) {
+    status.textContent = message;
+    status.classList.remove("is-success", "is-error");
+    status.classList.add(type === "success" ? "is-success" : "is-error");
+    status.hidden = false;
   }
 
   form.addEventListener("input", hideStatus);
@@ -46,11 +54,10 @@
         throw new Error(result.message || "The message could not be sent.");
       }
 
-      status.textContent = "Message sent successfully.";
-      status.hidden = false;
+      showStatus("Thank you for reaching out! Your message was sent successfully.", "success");
       form.reset();
     } catch {
-      hideStatus();
+      showStatus("Sorry, your message could not be sent. Please try again or email shehara314@gmail.com directly.", "error");
     } finally {
       submitButton.disabled = false;
       form.removeAttribute("aria-busy");

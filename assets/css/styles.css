@@ -698,6 +698,8 @@ a { color: inherit; text-decoration: none; }
 .contact-submit i:first-child { font-size: 1.1rem; }
 .contact-submit i:last-child { font-size: 1.15rem; }
 .contact-form-note { align-self: center; margin: 0; color: #8ea0b7; font-size: .78rem; line-height: 1.5; }
+.contact-form-note.is-success { color: #78e6ad; }
+.contact-form-note.is-error { color: #ff9b9b; }
 @media (max-width: 800px) { .contact-layout { grid-template-columns: minmax(0, 1fr); } .contact-details { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); } .contact-detail-card { min-height: 125px; flex-direction: column; align-items: flex-start; gap: .75rem; padding: 1rem; } .contact-detail-icon { width: 2.8rem; height: 2.8rem; font-size: 1.15rem; } .contact-detail-card p { font-size: .8rem; } .contact-social-links { top: 0; grid-column: 1 / -1; justify-content: center; margin-top: 0; padding: .25rem .15rem; } }
 @media (max-width: 620px) { .contact-section { padding: 5.5rem 1.25rem 3rem; } .contact-layout { gap: 1rem; } .contact-details { grid-template-columns: minmax(0, 1fr); gap: .75rem; } .contact-detail-card { min-height: 0; flex-direction: row; align-items: center; padding: 1rem 1.1rem; } .contact-form-panel { padding: 1.35rem; border-radius: 1.1rem; } .contact-form-panel h2 { font-size: clamp(1.55rem, 7vw, 2rem); } .contact-intro { margin-bottom: 1.4rem; font-size: .87rem; } .contact-form { grid-template-columns: minmax(0, 1fr); gap: .8rem; } .contact-message-field { grid-column: auto; } .contact-field { min-height: 3.25rem; padding: .85rem; } .contact-field textarea { min-height: 8rem; } .contact-submit { width: 100%; } .contact-form-note { text-align: center; } }
 @media (prefers-reduced-motion: reduce) { .contact-field, .contact-submit { transition: none; } }
@@ -865,6 +867,7 @@ a { color: inherit; text-decoration: none; }
 /* Image slots stay polished until the owner adds the referenced project/certificate files. */
 .project-image-frame { position: relative; width: 100%; aspect-ratio: 1.55; margin-top: 0; overflow: hidden; border-radius: 1rem; background: radial-gradient(ellipse at 75% 80%, rgba(25,112,255,.32), transparent 55%), linear-gradient(145deg,#101b2b,#070a11 72%); }
 .project-image { position: relative; z-index: 1; width: 100%; height: 100%; aspect-ratio: auto; margin: 0; object-fit: cover; opacity: 0; transition: transform .55s cubic-bezier(.2,.7,.2,1), filter .35s ease, opacity .3s ease; }
+.project-card:first-child .project-image { object-fit: contain; }
 .project-image-frame.is-loaded .project-image { opacity: 1; }
 .project-image-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .6rem; padding: 1rem; color: #a8c9ed; font-size: .82rem; text-align: center; }
 .project-image-placeholder i { color: var(--accent-blue); font-size: 2rem; }
@@ -890,10 +893,11 @@ a { color: inherit; text-decoration: none; }
 .certificate-art:not(.has-image) .certificate-image { display: none; }
 .certificate-open { position: absolute; z-index: 3; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; border-radius: inherit; background: transparent; cursor: zoom-in; }
 .certificate-open:focus-visible { outline: 3px solid #8ed0ff; outline-offset: -5px; }
-.certificate-viewer { position: fixed; width: min(94vw, 1180px); max-width: none; max-height: 92vh; overflow: visible; padding: clamp(.8rem, 2vw, 1.25rem); border: 1px solid rgba(85,184,255,.36); border-radius: 1.25rem; background: linear-gradient(145deg,#0d111b,#05070c 78%); color: var(--white); box-shadow: 0 30px 100px rgba(0,0,0,.7), 0 0 38px rgba(25,112,255,.16); }
+.certificate-viewer { position: fixed; inset: 0; display: flex; width: 100vw; height: 100vh; max-width: none; max-height: none; flex-direction: column; align-items: center; justify-content: center; overflow: auto; padding: clamp(3.5rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem) 1.25rem; border: 0; border-radius: 0; background: linear-gradient(145deg,#0d111b,#05070c 78%); color: var(--white); box-shadow: none; }
+.certificate-viewer:not([open]) { display: none; }
 .certificate-viewer[open] { animation: certificate-viewer-enter .22s cubic-bezier(.2,.7,.2,1) both; }
 .certificate-viewer::backdrop { background: rgba(1,3,8,.82); -webkit-backdrop-filter: blur(7px); backdrop-filter: blur(7px); }
-.certificate-viewer-image { display: block; width: 100%; max-height: calc(92vh - 5rem); border-radius: .7rem; object-fit: contain; }
+.certificate-viewer-image { display: block; width: min(100%, 1400px); max-height: calc(100vh - 5rem); border-radius: .7rem; object-fit: contain; }
 .certificate-viewer-title { margin: .85rem 3rem .1rem .15rem; color: #dcecff; font-size: .92rem; font-weight: 600; }
 .certificate-viewer-close { position: absolute; z-index: 2; top: .55rem; right: .55rem; display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border: 1px solid rgba(144,195,240,.35); border-radius: 50%; background: rgba(5,10,18,.9); color: #fff; font-size: 1.35rem; cursor: pointer; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
 .certificate-viewer-close:hover, .certificate-viewer-close:focus-visible { transform: rotate(90deg); border-color: var(--accent-blue); background: #123b70; }
@@ -901,8 +905,8 @@ a { color: inherit; text-decoration: none; }
 @keyframes certificate-viewer-enter { from { opacity: 0; transform: scale(.97) translateY(8px); } to { opacity: 1; transform: scale(1) translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .project-image, .certificate-image { transition: none; } }
 @media (max-width: 620px) {
-  .certificate-viewer { width: calc(100vw - 1rem); max-height: 94vh; padding: .55rem; border-radius: .9rem; }
-  .certificate-viewer-image { max-height: calc(94vh - 4.25rem); border-radius: .55rem; }
+  .certificate-viewer { width: 100vw; height: 100vh; padding: 3.5rem .55rem .55rem; border-radius: 0; }
+  .certificate-viewer-image { max-height: calc(100vh - 4.25rem); border-radius: .55rem; }
   .certificate-viewer-close { top: .35rem; right: .35rem; width: 2.25rem; height: 2.25rem; }
   .certificate-viewer-title { margin-top: .65rem; font-size: .82rem; }
 }
