@@ -344,7 +344,7 @@ a { color: inherit; text-decoration: none; }
 .career-panel { display: grid; gap: 2.4rem; opacity: 0; transform: translateY(10px); transition: opacity .24s ease, transform .24s ease; }
 .career-panel[hidden] { display: none !important; }
 .career-panel.is-active { opacity: 1; transform: translateY(0); }
-.career-entry { display: grid; align-items: start; gap: clamp(1.6rem, 4vw, 3.5rem); }
+.career-entry { display: grid; align-items: start; gap: clamp(1.6rem, 4vw, 3.5rem); padding: clamp(.75rem, 2vw, 1.35rem); border: 1px solid rgba(85, 184, 255, .2); border-radius: 1.15rem; }
 .career-details-toggle { display: none; }
 .experience-entry { grid-template-columns: minmax(170px, .42fr) minmax(0, 1fr); }
 .education-entry { grid-template-columns: minmax(0, 1fr) minmax(170px, .42fr); }
@@ -846,6 +846,7 @@ a { color: inherit; text-decoration: none; }
 :root[data-theme="light"] .contact-form-note { color: #52657b; }
 :root[data-theme="light"] .contact-detail-card p, :root[data-theme="light"] .project-description, :root[data-theme="light"] .career-content, :root[data-theme="light"] .skill-card p { color: #52657b; }
 :root[data-theme="light"] .career-tabs, :root[data-theme="light"] .certificate-search { border-color: rgba(36,82,132,.18); background: #fff; }
+:root[data-theme="light"] .career-entry { border-color: rgba(36,82,132,.22); }
 :root[data-theme="light"] .certificate-filter { border-color: rgba(36,82,132,.2); background: #eef4fb; color: #334c68; }
 :root[data-theme="light"] .certificate-art { border-color: rgba(36,82,132,.2); background: radial-gradient(ellipse at top left, rgba(25,112,255,.1), transparent 55%), linear-gradient(140deg,#f7faff,#e8f1fb 75%); }
 :root[data-theme="light"] .certificate-image { background: #eaf2fb; }
