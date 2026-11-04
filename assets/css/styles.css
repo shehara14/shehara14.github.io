@@ -846,7 +846,7 @@ a { color: inherit; text-decoration: none; }
 :root[data-theme="light"] .contact-form-note { color: #52657b; }
 :root[data-theme="light"] .contact-detail-card p, :root[data-theme="light"] .project-description, :root[data-theme="light"] .career-content, :root[data-theme="light"] .skill-card p { color: #52657b; }
 :root[data-theme="light"] .career-tabs, :root[data-theme="light"] .certificate-search { border-color: rgba(36,82,132,.18); background: #fff; }
-:root[data-theme="light"] .career-entry { border-color: rgba(36,82,132,.22); }
+:root[data-theme="light"] .career-entry { border-color: rgba(23,100,187,.38); box-shadow: 0 10px 28px rgba(23,100,187,.055); }
 :root[data-theme="light"] .certificate-filter { border-color: rgba(36,82,132,.2); background: #eef4fb; color: #334c68; }
 :root[data-theme="light"] .certificate-art { border-color: rgba(36,82,132,.2); background: radial-gradient(ellipse at top left, rgba(25,112,255,.1), transparent 55%), linear-gradient(140deg,#f7faff,#e8f1fb 75%); }
 :root[data-theme="light"] .certificate-image { background: #eaf2fb; }
