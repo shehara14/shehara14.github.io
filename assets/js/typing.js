@@ -1,12 +1,7 @@
 const focusText = document.querySelector("#focus-text");
 
 if (focusText) {
-  const roles = [
-    "Project Management",
-    "Quality Assurance",
-    "Project Coordination",
-    "Digital Product Collaboration",
-  ];
+  const roles = ["Project Manager", "QA", "Developer"];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   if (!reduceMotion.matches) {
@@ -15,12 +10,9 @@ if (focusText) {
     let deleting = false;
 
     const renderRole = (role, visibleCharacters) => {
-      const accentEnd = role.lastIndexOf(" ");
       const visibleText = role.slice(0, visibleCharacters);
-      const accent = visibleText.slice(0, accentEnd);
-      const rest = visibleText.length > accentEnd ? visibleText.slice(accentEnd + 1) : "";
-
-      focusText.innerHTML = `<span class="competency-accent">${accent}</span><br /><span class="competency-rest">${rest}</span>`;
+      focusText.textContent = visibleText;
+      focusText.classList.toggle("is-typing", visibleCharacters < role.length);
     };
 
     const animateTyping = () => {

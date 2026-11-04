@@ -56,8 +56,11 @@
 
       showStatus("Thank you for reaching out! Your message was sent successfully.", "success");
       form.reset();
-    } catch {
-      showStatus("Sorry, your message could not be sent. Please try again or email shehara314@gmail.com directly.", "error");
+    } catch (error) {
+      const detail = error instanceof Error && error.message
+        ? ` (${error.message})`
+        : " (Please check your connection and try again.)";
+      showStatus(`Sorry, your message could not be sent${detail}`, "error");
     } finally {
       submitButton.disabled = false;
       form.removeAttribute("aria-busy");
