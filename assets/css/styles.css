@@ -1195,3 +1195,139 @@ a { color: inherit; text-decoration: none; }
   .career-entry { transition: none; }
   .career-entry:hover { transform: none; }
 }
+
+/* Chronological career timeline, newest dates first. */
+.career-heading h2 { font-size: clamp(2rem, 4vw, 3rem); }
+.career-panel,
+.education-panel {
+  --timeline-date-width: 10rem;
+  --timeline-gap: clamp(1.5rem, 3vw, 2.2rem);
+  position: relative;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  max-width: 940px;
+  margin-inline: auto;
+}
+.career-panel::before {
+  position: absolute;
+  top: .75rem;
+  bottom: .75rem;
+  left: calc(var(--timeline-date-width) + var(--timeline-gap) / 2);
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(88, 170, 255, .5) 5%, rgba(88, 170, 255, .22) 95%, transparent);
+  content: "";
+}
+.career-entry,
+.education-entry,
+.experience-entry {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: var(--timeline-date-width) minmax(0, 1fr);
+  align-items: start;
+  gap: 0 var(--timeline-gap);
+  min-height: 0;
+  overflow: visible;
+  padding: .55rem 0 1.2rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transition: none;
+}
+.career-entry::after { display: none; }
+.career-entry::before {
+  position: absolute;
+  z-index: 2;
+  top: 1.75rem;
+  left: calc(var(--timeline-date-width) + var(--timeline-gap) / 2);
+  width: .72rem;
+  height: .72rem;
+  transform: translateX(-50%);
+  border: 3px solid #080d16;
+  border-radius: 50%;
+  background: #55bdff;
+  box-shadow: 0 0 0 1px rgba(85, 189, 255, .5), 0 0 16px rgba(45, 150, 255, .55);
+  content: "";
+}
+.career-entry:hover { transform: none; border-color: transparent; box-shadow: none; }
+.career-date,
+.education-entry .career-date {
+  position: static;
+  display: block;
+  grid-column: 1;
+  grid-row: 1;
+  width: auto;
+  max-width: none;
+  align-self: start;
+  order: initial;
+  margin-top: 1.25rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #96cfff;
+  font-size: clamp(.88rem, 1.4vw, 1.03rem);
+  font-weight: 750;
+  line-height: 1.45;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.career-content,
+.education-entry .career-content {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  order: initial;
+  padding: 1.2rem 1.35rem;
+  border: 1px solid rgba(91, 162, 234, .2);
+  border-radius: 1.1rem;
+  background: linear-gradient(135deg, rgba(14, 26, 43, .82), rgba(7, 12, 21, .68));
+  box-shadow: inset 0 1px 0 rgba(219, 238, 255, .035);
+}
+.career-content::before { display: none; }
+.career-content h3 { font-size: clamp(1.1rem, 1.7vw, 1.38rem); }
+.career-content ul,
+.education-entry .career-content ul { font-size: .86rem; }
+.career-brand {
+  display: inline-flex;
+  width: auto;
+  height: auto;
+  margin: 0 0 .85rem;
+  padding: 0;
+  place-items: initial;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.career-brand img { width: auto; height: auto; max-width: 7rem; max-height: 5.5rem; object-fit: contain; }
+:root[data-theme="light"] .career-entry::before { border-color: #f4f8fd; }
+:root[data-theme="light"] .career-date { color: #286baa; }
+:root[data-theme="light"] .career-content,
+:root[data-theme="light"] .education-entry .career-content {
+  border-color: rgba(42, 111, 177, .17);
+  background: linear-gradient(135deg, rgba(255, 255, 255, .95), rgba(239, 246, 253, .95));
+  box-shadow: 0 10px 26px rgba(44, 75, 111, .07);
+}
+:root[data-theme="light"] .career-brand { border: 0; background: transparent; box-shadow: none; }
+@media (max-width: 680px) {
+  .career-panel,
+  .education-panel { --timeline-date-width: 5.8rem; --timeline-gap: 1.35rem; }
+  .career-entry,
+  .education-entry,
+  .experience-entry { padding-block: .45rem .95rem; }
+  .career-date,
+  .education-entry .career-date { margin-top: 1.05rem; font-size: .78rem; }
+  .career-content,
+  .education-entry .career-content { padding: 1rem; }
+  .career-brand img { max-width: 5.5rem; max-height: 4.25rem; }
+}
+@media (max-width: 390px) {
+  .career-panel,
+  .education-panel { --timeline-date-width: 4.65rem; --timeline-gap: .95rem; }
+  .career-date,
+  .education-entry .career-date { font-size: .7rem; }
+  .career-content,
+  .education-entry .career-content { padding: .85rem; }
+  .career-content ul { font-size: .78rem; }
+}
