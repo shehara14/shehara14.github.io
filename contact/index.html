@@ -47,7 +47,10 @@
             <span class="contact-accent-rule" aria-hidden="true"></span>
             <h2 id="contact-title">Send Me a Message</h2>
             <p class="contact-intro">Send me a message and I'll get back to you as soon as possible.</p>
-            <form class="contact-form" id="contact-form" data-endpoint="https://formsubmit.co/ajax/shehara314@gmail.com">
+            <form class="contact-form" id="contact-form" action="https://formsubmit.co/shehara314@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="New portfolio message" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_url" value="https://shehara14.github.io/contact" />
               <label class="contact-field">
                 <span class="sr-only">Name</span>
                 <i class="ri-user-line" aria-hidden="true"></i>
@@ -93,7 +96,6 @@
         </div>
       </section>
     </main>
-    <script src="/assets/js/contact-form.js?v=9435036" defer></script>
     <script src="/assets/js/motion.js" defer></script>
     <script src="/assets/js/site-enhancements.js" defer></script>
     <script src="/assets/js/clean-url.js" defer></script>
